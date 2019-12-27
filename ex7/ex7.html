@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function membre(id,nom,grade){
+			this.id=id;
+			this.nom = nom;
+			this.grade = grade;
+			this.toString = function(){
+				console.log("id: "+id+", nom: "+nom+ ", grade: "+grade+". ");
+			}
+		}
+
+		function team(){
+			this.membres = [];
+			this.ajouterMembre = function(membre){
+				this.membres.push(membre);
+			}
+		}
+
+		var membre1 = new membre(1,"amine","a");
+		var membre2 = new membre(2,"karim","b");
+		var team_one = new team();
+
+		team_one.ajouterMembre(membre1);
+		team_one.ajouterMembre(membre2);
+
+		for (var i = 0; i <team_one.membres.length ; i++) {
+			console.log("membre "+i+" : ");
+			console.log(team_one.membres[i].toString());
+		}
+		// console.log(team);
+	</script>
+</body>
+</html>
+
+

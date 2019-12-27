@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>personne</title>
+</head>
+
+<body>
+
+</body>
+
+	<script type="text/javascript">
+		class Personne{
+			constructor(gender,salaireBrut,charge, salaire){
+				this.gender = gender;
+				this.salaireBrut = salaireBrut;
+				this.charge = charge;
+				this.salaire = salaire;
+			}
+			Bonus(){
+				this.salaireBrut+=100;
+			};
+			calculerSalaire(){
+				switch(this.gender){
+					case 'femme': this.salaire = this.salaireBrut-(this.salaireBrut*0.28);
+						break;
+					case 'homme': if(this.charge==3){
+										this.salaire = this.salaireBrut-(this.salaireBrut*0.29);
+									}
+								else if(this.charge==4){
+										this.salaire = this.salaireBrut-(this.salaireBrut*0.28);
+									}
+								else {this.salaire = this.salaireBrut-(this.salaireBrut*0.30);}
+						;break;
+					default: this.salaire = this.salaireBrut-(this.salaireBrut*0.30);
+				}
+				// console.log(`le nouveau salaire est: ${this.salaire}`);
+			};
+			toString(){
+				console.log(`l'employé est un: ${this.gender} ,
+					et son salaire brut est de: ${this.salaireBrut}dh,
+					il prend charge de ${this.charge},
+					donc son salaire sera de : ${this.salaire}dh.`);
+				// console.log(this);
+			}
+		}
+		var personne1 = new Personne('homme',1500,4);
+		console.log(personne1.calculerSalaire());
+		// console.log(personne1.salaire);
+		console.log(personne1.toString());
+		console.log(this);
+	</script>
+
+</html>
