@@ -1,5 +1,19 @@
 
 
+var affichage = document.getElementById('message');
+var a="1";
+var b="2";
+var c=a+b;
+affichage.innerHTML+="le type de a est " +typeof(a) + ", le type de b est  "+typeof(b)+ " , le type de c est  "+typeof(c);
+
+a = parseInt(a);
+affichage.innerHTML+="le type de a est " +typeof(a);
+
+b = parseInt(b);
+affichage.innerHTML+="le type de b est " +typeof(b);
+c=a+b;
+affichage.innerHTML += c;
+
 // s truc =55;
 // console.log(truc);
 // var truc;
@@ -8,20 +22,7 @@
 // let x = 'hgh'+"nnn"; console.log(x);
 // let a=7;
 // a==9?console.log('a=9'):console.log('a=7');
-// var affichage = document.getElementById('message');
 
-// var a="1";
-// var b="2";
-// var c=a+b;
-// affichage.innerText="le type de a est " +typeof(a) + ", le type de b est  "+typeof(b)+ " , le type de c est  "+typeof(c);
-
-// a =parseInt(a);
-// affichage.innerText="le nvtype de a est " +typeof(a);
-
-// b =parseInt(b);
-// affichage.innerText="le nv type de b est " +typeof(b);
-// c=a+b;
-// affichage.innerText=c;
 
 // let x=2;
 // switch(x){
@@ -148,9 +149,9 @@
 
 // console.log(window.document.url);
 
-var div = document.querySelector('div');
-while(div.firstChild){
-	div.removeChild(div.firstChild);
-}
-console.log(div);
+// var div = document.querySelector('div');
+// while(div.firstChild){
+// 	div.removeChild(div.firstChild);
+// }
+// console.log(div);
 
